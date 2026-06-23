@@ -1,0 +1,24 @@
+name: Job Output Demo
+
+on:
+  workflow_dispatch
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.step1.outputs.version }}
+
+    steps:
+      - id: step1
+        run: echo "version=1.0.0" >> $GITHUB_OUTPUT
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Deploying version ${{ needs.build.outputs.version }}"
