@@ -3,9 +3,12 @@ name: My First Workflow
 on:
   workflow_dispatch:
 
+env:
+  APP_NAME: myapp
+
 jobs:
   demo:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Hello GitHub Actions"
+      - run: echo $APP_NAME
