@@ -9,8 +9,10 @@ jobs:
 
     steps:
       - name: Create Version
-        id: step1
-        run: echo "version=1.0.0" >> $GITHUB_OUTPUT
+        id: step2
+        run: echo "test=1.0.0" >> $GITHUB_OUTPUT
 
       - name: Use Version
-        run: echo "${{ steps.step1.outputs.version }}"
+        run: echo "${{ steps.step2.outputs.test }}"
+
+  
