@@ -2,13 +2,11 @@ name: Build App
 
 runs:
   using: composite
+env:
+  APP_NAME: workflow
 
-  steps:
-    - run: npm install
-      shell: bash
+steps:
+  - run: echo $APP_NAME
 
-    - run: npm test
-      shell: bash
 
-    - run: npm run build
-      shell: bash
+
