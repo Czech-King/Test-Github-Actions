@@ -1,4 +1,6 @@
 name: Build App
+on:
+  workflow_dispatch:
 
 runs:
   using: composite
