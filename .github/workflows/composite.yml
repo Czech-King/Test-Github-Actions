@@ -1,11 +1,15 @@
-name: Output Demo
+name: Composite Action Test
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
-  demo:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: ./.github/actions
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Composite Action
+        uses: ./.github/actions
