@@ -1,0 +1,12 @@
+name: Output Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Running
+        uses: ./.github.actions/build-app
