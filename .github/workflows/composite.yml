@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: Running
-        uses: ./.github.actions/build-app
+        uses: ./.github/actions/build-app
