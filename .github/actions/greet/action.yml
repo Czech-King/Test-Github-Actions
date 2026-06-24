@@ -1,1 +1,20 @@
+name: Greet Action
+
+description: Simple composite action demo
+
+runs:
+  using: composite
+
+  steps:
+    - name: Print greeting
+      run: echo "Hello from Composite Action"
+      shell: bash
+
+    - name: Print date
+      run: date
+      shell: bash
+
+    - name: Print repo
+      run: echo "Repo: $GITHUB_REPOSITORY"
+      shell: bash
 
