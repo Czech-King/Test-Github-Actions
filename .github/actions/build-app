@@ -2,11 +2,10 @@ name: Build App
 
 runs:
   using: composite
-env:
-  APP_NAME: workflow
 
-steps:
-  - run: echo $APP_NAME
+
+  steps:
+    - run: echo "Hello"
 
 
 
