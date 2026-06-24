@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Running
-        uses: ./.github/actions/build-app
+      - uses: ./.github/actions
