@@ -14,7 +14,3 @@ runs:
       run: date
       shell: bash
 
-    - name: Print repo
-      run: echo "Repo: $GITHUB_REPOSITORY"
-      shell: bash
-
